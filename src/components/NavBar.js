@@ -2,45 +2,116 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import { SocialIcon } from "react-social-icons";
 
-
 export default function NavBar() {
-    return (
-        <header className="bg-red-600">
-            <div className="container mx-auto flex justify-between">
-                <nav className="flex">
-                    <NavLink 
-                        to="/" 
-                        exact 
-                        activeClassName="text-white" 
-                        className="inline-flex items-center py-6 px-3 mr-4 text-red-100 hover:text-green-800 text-4xl font-bold cursive tracking-widest">
-                        Abdul
-                    </NavLink>
-                    <NavLink to="/post" 
-                        className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-green-800"
-                        activeClassName="text-red-100 bg-red-700">
-                        Blog Posts
-                    </NavLink>
-                    <NavLink to="/project"
-                        className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-green-800"
-                        activeClassName="text-red-100 bg-red-700">
-                        Projects
-                    </NavLink>
-                    <NavLink to="/about"
-                        className="inline-flex items-center py-3 px-3 my-6 rounded text-red-200 hover:text-green-800"
-                        activeClassName="text-red-100 bg-red-700">
-                        About me!
-                    </NavLink>
-                </nav>
+  return (
+    <header className="nav-header">
+        <NavLink to="/" exact activeClassName="nav-active" className="nav-link">
 
-                <div className="inline-flex py-3 px-3 my-6">
-                    <SocialIcon url="twitter.com/test" className="mr-4" target="_blank" fgColor="#fff" style={{height: 35, width: 35}} />
-                    <SocialIcon url="instagram.com/test" className="mr-4" target="_blank" fgColor="#fff" style={{height: 35, width: 35}} />
-                    <SocialIcon url="youtube.com/test" className="mr-4" target="_blank" fgColor="#fff" style={{height: 35, width: 35}} />
+      <div id="logo-container">
+        <div class="logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 21.48 21.68"
+            class="a"
+          >
+            <title>a</title>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="Layer_1-2" data-name="Layer 1">
+                <path d="M10.7,0a10.2,10.2,0,0,1,7.87,3.43,10.59,10.59,0,0,1,2.89,7.44q0,10.65,0,10.81H18.67V17q-2.21,4.08-8,4.57A10,10,0,0,1,3,18.37a10.67,10.67,0,0,1-3-7.5A10.72,10.72,0,0,1,2.83,3.45,10.18,10.18,0,0,1,10.7,0Zm0,2.59A7.58,7.58,0,0,0,5.06,5,8.18,8.18,0,0,0,2.7,10.91,8.36,8.36,0,0,0,3.91,15.2,9.33,9.33,0,0,0,8,18.68q7.23,1.62,10.29-6.57a14,14,0,0,0-.56-5A8.36,8.36,0,0,0,16.29,5,7.42,7.42,0,0,0,10.7,2.59Z" />
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="logo middle">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 21.4 29.01"
+            class="b tall hide"
+          >
+            <title>b</title>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="Layer_1-2" data-name="Layer 1">
+                <path d="M2,25a14.13,14.13,0,0,1-2-5.53V0H2.62V11.47A11.29,11.29,0,0,1,6.35,8.42a10.32,10.32,0,0,1,4.52-1,10,10,0,0,1,7.44,3.17,10.59,10.59,0,0,1,3.09,7.68,10.43,10.43,0,0,1-3.11,7.59A10.15,10.15,0,0,1,10.79,29a11.67,11.67,0,0,1-4.71-1A11.9,11.9,0,0,1,2,25Zm8.55,1.48a8,8,0,0,0,7.06-4.14,8.29,8.29,0,0,0,1.11-4.16A8.46,8.46,0,0,0,17.63,14a8.1,8.1,0,0,0-3-3.09,7.9,7.9,0,0,0-4-1.1,8.32,8.32,0,0,0-4.13,1.1,7.58,7.58,0,0,0-3,3,8.45,8.45,0,0,0-1.05,4.2,8.16,8.16,0,0,0,2.36,6A7.78,7.78,0,0,0,10.57,26.48Z" />
+              </g>
+            </g>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 21.4 29.01"
+            class="d tall hide"
+          >
+            <title>Asset 4</title>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="Layer_1-2" data-name="Layer 1">
+                <path d="M15.32,28.05a11.67,11.67,0,0,1-4.71,1,10.15,10.15,0,0,1-7.5-3.15A10.43,10.43,0,0,1,0,18.27a10.59,10.59,0,0,1,3.09-7.68,10,10,0,0,1,7.44-3.17,10.32,10.32,0,0,1,4.52,1,11.19,11.19,0,0,1,3.73,3.05V0H21.4V19.47a14.13,14.13,0,0,1-2,5.53A11.9,11.9,0,0,1,15.32,28.05Zm1.28-4a8.16,8.16,0,0,0,2.37-6,8.45,8.45,0,0,0-1-4.2,7.61,7.61,0,0,0-3-3,8.32,8.32,0,0,0-4.13-1.1,7.9,7.9,0,0,0-4,1.1,8,8,0,0,0-3,3.09,8.34,8.34,0,0,0,0,8.33,8,8,0,0,0,7.06,4.14A7.77,7.77,0,0,0,16.6,24.08Z" />
+              </g>
+            </g>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 17.99 21.06"
+            class="u hide"
+          >
+            <g data-name="Layer 2">
+              <path
+                d="M0 0h2.66v9.59A20.51 20.51 0 0 0 3 14.43a5.36 5.36 0 0 0 2.15 3A6.59 6.59 0 0 0 9 18.52a6.4 6.4 0 0 0 3.75-1.07 5.43 5.43 0 0 0 2.12-2.81 19.35 19.35 0 0 0 .41-5.05V0H18v10.1a15.72 15.72 0 0 1-1 6.4 7.68 7.68 0 0 1-3 3.36 9.53 9.53 0 0 1-5 1.2 9.64 9.64 0 0 1-5-1.2 7.52 7.52 0 0 1-3-3.4 16.62 16.62 0 0 1-1-6.57z"
+                data-name="Layer 1"
+              />
+            </g>
+          </svg>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 2.66 28.5"
+            class="l tall hide"
+          >
+            <title>Asset 10</title>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="Layer_1-2" data-name="Layer 1">
+                <path d="M0,0H2.66V28.5H0Z" />
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="logo">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 30.73 21.08"
+            class="rm"
+          >
+            <defs>
+              <style>.cls-1</style>
+            </defs>
+            <title>Asset 14</title>
+            <g id="Layer_2" data-name="Layer 2">
+              <g id="Layer_1-2" data-name="Layer 1">
+                <path d="M29.94,4.08a5.87,5.87,0,0,0-2.77-3A8.51,8.51,0,0,0,23.07,0a10.46,10.46,0,0,0-3.65.84,10.26,10.26,0,0,0-1.9,1.22,9.81,9.81,0,0,0-2,2.81,11.4,11.4,0,0,0-1.7-2.81A5.94,5.94,0,0,0,11.47.56c-.3-.11-.59-.19-.89-.27L9.16,2.61a5.43,5.43,0,0,0-.71,0,4.86,4.86,0,0,1,2.85.79,7.27,7.27,0,0,1,2,2.14c.55.89.82,2.58.82,5.05V21.08h2.65V10.66C17,8,17.45,6.28,18,5.51A7.1,7.1,0,0,1,23.2,2.57,4.88,4.88,0,0,1,26,3.33a4.12,4.12,0,0,1,1.61,2A14.8,14.8,0,0,1,28,9.86V21.08h2.69V9.86A16,16,0,0,0,29.94,4.08Z" />
+                <path
+                  class="cls-1"
+                  d="M10.58.29l-.08,0C10.21.2,9.92.14,9.63.1a1.6,1.6,0,0,0-.23,0,7.91,7.91,0,0,0-1-.07A7.06,7.06,0,0,0,4.85.86,8.76,8.76,0,0,0,1.76,3.69Q.34,5.64,0,9.84V21.08H2.62V12.37a16.06,16.06,0,0,1,.6-6.06A6.13,6.13,0,0,1,5.29,3.5a5.36,5.36,0,0,1,3.16-.93,5.43,5.43,0,0,1,.71,0Z"
+                />
+              </g>
+            </g>
+          </svg>
+        </div>
+      </div>
+      </NavLink>
 
-                </div>
 
-            </div>
-
-        </header>
-    )
+      <nav className="nav">
+        <NavLink to="/post" activeClassName="nav-active" className="nav-link">
+          Blog Posts
+        </NavLink>
+        <NavLink
+          to="/project"
+          activeClassName="nav-active"
+          className="nav-link"
+        >
+          Projects
+        </NavLink>
+        <NavLink to="/about" activeClassName="nav-active" className="nav-link">
+          About me!
+        </NavLink>
+      </nav>
+    </header>
+  );
 }
